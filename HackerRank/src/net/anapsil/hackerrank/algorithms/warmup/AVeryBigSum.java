@@ -2,20 +2,16 @@ package net.anapsil.hackerrank.algorithms.warmup;
 
 import java.util.Scanner;
 
-public class SimpleArraySum {
+public class AVeryBigSum {
 
-	static int sum(int a, int b) {
-		return a + b;
-	}
-	
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 
 		int size = in.nextInt();
-		int sum = 0;
+		long sum = 0;
 		
 		while (in.hasNext()) {
-			sum += in.nextInt();
+			sum += in.nextLong();
 		}
 		
 		System.out.println(sum);
