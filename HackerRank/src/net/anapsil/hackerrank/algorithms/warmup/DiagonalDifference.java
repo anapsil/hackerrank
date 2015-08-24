@@ -33,12 +33,10 @@ public class DiagonalDifference {
 		
 		for (int i = 0; i < size; i++) {
 			firstDiagonal += matrix[i][i];
+			secondDiagonal += matrix[i][size-1-i];
 		}
-		
-		for (int i = size-1; i == 0; i--) {
-			secondDiagonal += matrix[i][i];
-		}
-		System.out.println(firstDiagonal - secondDiagonal);
+
+		System.out.println(Math.abs((firstDiagonal - secondDiagonal)));
 
 	}
 
