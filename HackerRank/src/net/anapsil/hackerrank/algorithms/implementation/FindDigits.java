@@ -5,27 +5,27 @@ import java.util.Scanner;
 public class FindDigits {
 
 	public static void main(String[] args) {
-Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);
 		
 		int quant = in.nextInt();
-        String[] values = new String[30];
+        int[] values = new int[quant];
 		int dividers;
+		int divisor;
 		
-		for (int i = 0;i< quant;i++) {
-			if (in.hasNext()) {
-				values[i] = in.next();
-			}
+		for (int i = 0; i < quant; i++) {
+			values[i] = in.nextInt();
 		}
 		
-		for (String v: values) {
+		for (int i = 0; i < quant; i++) {
+			String value = String.valueOf(values[i]);
 			dividers = 0;
-			for (int i = 0; i < v.length(); i++) {
-				int div = (int) v.charAt(i);
-				
-				if (div != 0 && Integer.parseInt(v)%div == 0) {
+			for (int d = 0; d < value.length(); d++) {
+				divisor = Character.getNumericValue((value.charAt(d)));
+				if (divisor != 0 && values[i]%divisor == 0) {
 					dividers++;
 				}
 			}
+			
 			System.out.println(dividers);
 		}
 	}
