@@ -18,8 +18,9 @@ public class TimeConversion {
 		
 		StringBuilder convertedTime = new StringBuilder();
 		if (hour < 10) {
-		convertedTime.append("0");
+			convertedTime.append("0");
 		}
+		
 		convertedTime.append(hour).append(time.substring(2,8));
 		
 		System.out.println(convertedTime);
